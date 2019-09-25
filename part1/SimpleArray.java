@@ -15,6 +15,10 @@ class SimpleArray
          Write a loop to compute the square of each element from the
          input array and to place the result into the output array.
       */
+      for(int i = 0; i < values.length; i++)
+      {
+         newValues[i] = math.pow(values[i], 2);
+      }
 
 
       return newValues;
