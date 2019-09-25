@@ -35,7 +35,7 @@ public class TestCases
       /* TO DO: Write one more valid test case. */
    }
 
-   @Test
+  @Test
    public void testSimpleLoop1()
    {
       assertEquals(7, SimpleLoop.sum(3, 4));
@@ -54,6 +54,7 @@ public class TestCases
       /* TO DO: Write one more valid test case to make sure that
          this function is not just returning 7. */
    }
+
 
    @Test
    public void testSimpleArray1()
@@ -152,6 +153,7 @@ public class TestCases
       assertEquals(new HashSet<>(expected),
          new HashSet<>(ExampleMap.highEnrollmentStudents(
             courseListsByStudent, 16)));
+
    }
 
    @Test
@@ -160,4 +162,5 @@ public class TestCases
       fail("Missing ExampleMap2");
       /* TO DO: Write another valid test case. */
    }
+
 }
