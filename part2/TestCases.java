@@ -69,7 +69,7 @@ public class TestCases
         assertEquals(-5.0, new Point(-5.0, 5.0).rotate90().getX(), DELTA);
         assertEquals(-5.0, new Point(-5.0, 5.0).rotate90().getY(), DELTA);
         assertEquals(5.0, new Point(5.0, -5.0).rotate90().getX(), DELTA);
-        assertEquals(5.0, new Point(5.0, -5.0).rotate90().gety(), DELTA);
+        assertEquals(5.0, new Point(5.0, -5.0).rotate90().getY(), DELTA);
     }
 
 
