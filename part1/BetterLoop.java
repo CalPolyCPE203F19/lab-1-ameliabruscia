@@ -5,12 +5,12 @@ class BetterLoop
       /* TO DO: if value v is in the array, return true.
          If not, return false.  Use a "foreach" loop.
       */
-      boolean check = False;
+      boolean check = false;
       for(int val: values)
       {
-         if (val.equals(v))
+         if (val == v)
          {
-            check = True;
+            check = true;
          }
       }
 

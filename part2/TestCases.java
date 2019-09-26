@@ -1,3 +1,17 @@
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+import org.junit.Test;
 
 public class TestCases
 {
@@ -11,6 +25,53 @@ public class TestCases
    {
       assertEquals(1.0, new Point(1.0, 2.0).getX(), DELTA);
    }
+
+    @Test
+    public void testGetX2()
+    {
+        assertEquals(10.0, new Point(10.0, 2.0).getX(), DELTA);
+    }
+
+    @Test
+    public void testGetY()
+    {
+        assertEquals(2.0, new Point(10.0, 2.0).getY(), DELTA);
+    }
+
+    @Test
+    public void testGetY2()
+    {
+        assertEquals(0.0, new Point(4.0, 0.0).getY(), DELTA);
+    }
+
+    @Test
+    public void testGetRadius()
+    {
+        assertEquals(5.0, new Point(3.0, 4.0).getRadius(), DELTA);
+        assertEquals(13.0, new Point(5.0, 12.0).getRadius(), DELTA);
+    }
+
+    @Test
+    public void testGetAngle()
+    {
+        assertEquals((Math.PI/2.0), new Point(0.0, 5.0).getAngle(), DELTA);
+        assertEquals(0.0, new Point(4.0, 0.0).getAngle(), .1);
+        assertEquals(Math.PI/4.0, new Point(Math.sqrt(2)/2, Math.sqrt(2)/2).getAngle(), DELTA);
+    }
+
+    @Test
+    public void testRotate90()
+    {
+        assertEquals(-4.0, new Point(3.0, 4.0).rotate90().getX(), DELTA);
+        assertEquals(3.0, new Point(3.0, 4.0).rotate90().getY(), DELTA);
+        assertEquals(-1.0, new Point(1.0, 1.0).rotate90().getX(), DELTA);
+        assertEquals(1.0, new Point(1.0, 1.0).rotate90().getY(), DELTA);
+        assertEquals(-5.0, new Point(-5.0, 5.0).rotate90().getX(), DELTA);
+        assertEquals(-5.0, new Point(-5.0, 5.0).rotate90().getY(), DELTA);
+        assertEquals(5.0, new Point(5.0, -5.0).rotate90().getX(), DELTA);
+        assertEquals(5.0, new Point(5.0, -5.0).rotate90().gety(), DELTA);
+    }
+
 
    /*
     * The tests below here are to verify the basic requirements regarding
