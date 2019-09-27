@@ -16,7 +16,7 @@ class SimpleList
       */
       for(int val: values)
       {
-         newValues.add(Math.pow(val, 2));
+         newValues.add((int)(Math.pow(val, 2)));
       }
       return newValues;
    }
