@@ -17,7 +17,7 @@ class SimpleArray
       */
       for(int i = 0; i < values.length; i++)
       {
-         newValues[i] = Math.pow(values[i], 2);
+         newValues[i] = (int)(Math.pow(values[i], 2));
       }
 
 
