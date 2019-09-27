@@ -117,7 +117,7 @@ public class TestCases
    @Test
    public void testBetterLoop3()
    {
-      assertFalse(BetterLoop.contains(new int[] {7, 5, 2, 4}, 9));
+      assertTrue(BetterLoop.contains(new int[] {7, 5, 2, 4}, 7));
    }
 
    @Test
